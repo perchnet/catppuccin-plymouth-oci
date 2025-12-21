@@ -40,10 +40,8 @@ jobs:
           file: ./all.Dockerfile
           outputs: type=local,dest=./out
           push: true
-          build-args: |
-            "FLAVOR=${{ matrix.flavor }}"
           tags: |
-            ghcr.io/${{ github.repository }}:${{ matrix.flavor }}
+            ghcr.io/${{ github.repository }}:latest
           cache-from: type=registry,ref=ghcr.io/${{ github.repository }}:buildcache
           cache-to: type=registry,ref=ghcr.io/${{ github.repository }}:buildcache,mode=max
           #platforms: linux/amd64,linux/arm64
