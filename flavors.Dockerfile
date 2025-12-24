@@ -6,7 +6,7 @@ mkdir /w
 tee /w/plymouthd.conf <<EOT
 # From the catppuccin-plymouth-oci:${FLAVOR} OCI package
 [Theme]
-Theme="${FLAVOR}"
+Theme=${FLAVOR}
 EOT
 EOR
 ARG FLAVOR
